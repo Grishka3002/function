@@ -1,23 +1,37 @@
-def summ(n):
+def summ():
     i = 0
     s = 0
-    for i in range(n):
+    a = int(input('Введите слагаемое. Для завершения введите -0'))
+    s = a
+    while i == 0:
         a = int(input())
-        s = s + a
+        if a == -0:
+            break
+        else: 
+            s = s + a
     print(s)
 
-def umn(n):
+def umn():
     i = 0
     s = 1
-    for i in range(n):
+    a = int(input('Введите множитель. Для завершения введите -0'))
+    s = a
+    while i == 0:
         a = int(input())
-        s = s * a
+        if a == -0:
+            break
+        else:
+            s = s * a
     print(s)
 
-d = input("Выберите действие, которое хотите совершить. 1 - умножение, 2 - сложение.")
-if d == "1":
-    h = int(input('Введите количство множителей'))
-    umn(h)
-else:
-    h = int(input('Введите количство слагаемых'))
-    summ(h)
+t = 1
+while t == 1:
+    d = input("Выберите действие, которое хотите совершить. 1 - умножение, 2 - сложение.")
+    if d == "1":
+        umn()
+        break
+    elif d == "2":
+        summ()
+        break
+    else:
+        print("Выберите одно из предложеных действий")
