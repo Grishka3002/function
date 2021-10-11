@@ -38,7 +38,7 @@ def delit():
             s = s/a
     print(round(s, h))
 
-def mius():
+def minus():
     i = 0
     a = int(input('Введите уменьшаемое. '))
     s = a
@@ -49,6 +49,17 @@ def mius():
         else: 
             s = s - a
     print(s)
+
+def fuct():
+    i = 0
+    while i == 0:
+        a = int(input("Введите число факториал которого нужно вычислить. Для завершения введите -0 "))
+        s = 1
+        if a == -0:
+            break
+        for c in range(2, a+1):
+            s = s*c
+        print(s)
 
 t = 1
 while t == 1:
@@ -63,7 +74,10 @@ while t == 1:
         delit()
         break
     elif d == "4":
-        mius()
+        minus()
+        break
+    elif d == "5":
+        fuct()
         break
     else:
         print("Выберите одно из предложеных действий")
